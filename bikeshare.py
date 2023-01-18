@@ -8,12 +8,12 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze.
+    Asks user to select a city, month, and day to analyze.
 
     Returns:
         (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) month - name of the month to filter by
+        (str) day - name of the day of week to filter by
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -23,18 +23,34 @@ def get_filters():
     while city.lower() not in cities:
         city = input('This city is not available for selection. Please select: Chicago, New York City or Washington.')
 
+<<<<<<< HEAD
     # get user input for month (all, january, february, ... , june)
+||||||| 7e4c121
+    # TO DO: get user input for month (all, january, february, ... , june)
+=======
+    # TO DO: get user input for month (january, february, ... , june)
+>>>>>>> refactoring
                  
-    month = input('Please choose a month: January, February, March, April, May, June or all.').lower()
-    months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+    month = input('Please choose a month: January, February, March, April, May, June.').lower()
+    months = ['january', 'february', 'march', 'april', 'may', 'june']
     while month.lower() not in months:
-        month = input('Please select a month to choose from: January, February, March, April, May, June or all.')
+        month = input('Please select a month to choose from: January, February, March, April, May, June.')
 
+<<<<<<< HEAD
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Please choose a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.').lower()
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+||||||| 7e4c121
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    day = input('Please choose a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.').lower()
+    days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+=======
+    # TO DO: get user input for day of week (monday, tuesday, ... sunday)
+    day = input('Please choose a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.').lower()
+    days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
+>>>>>>> refactoring
     while day.lower() not in days:
-        day = input('Please select a day of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.')
+        day = input('Please select a day of the week: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.')
     
     print('-'*40)
     return city, month, day
