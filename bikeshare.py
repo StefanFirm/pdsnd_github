@@ -12,7 +12,7 @@ def get_filters():
 
     Returns:
         (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
+        (str) month - name of the month to filter by
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
@@ -23,12 +23,12 @@ def get_filters():
     while city.lower() not in cities:
         city = input('This city is not available for selection. Please select: Chicago, New York City or Washington.')
 
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # TO DO: get user input for month (january, february, ... , june)
                  
-    month = input('Please choose a month: January, February, March, April, May, June or all.').lower()
-    months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
+    month = input('Please choose a month: January, February, March, April, May, June.').lower()
+    months = ['january', 'february', 'march', 'april', 'may', 'june']
     while month.lower() not in months:
-        month = input('Please select a month to choose from: January, February, March, April, May, June or all.')
+        month = input('Please select a month to choose from: January, February, March, April, May, June.')
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('Please choose a day: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday or all.').lower()
